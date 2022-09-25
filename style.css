@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -6,37 +10,116 @@
 
 .sidepanel {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    padding: 20px;
     flex-direction: column;
-
     background-color: red;
     grid-column: 1/2;
     grid-row: 1/6;
 }
 
-.sidepanel_content{
-    background-color: aliceblue;
-    width: 200px;
+.option img{
+    height: 30px;
+    width: 30px;
 }
+
+.option{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.title{
+    margin-left: 10px;
+}
+
+.basic_info{
+    margin-top: 40px;
+}
+
+.settings{
+    margin-top: 60px;
+}
+
+.dashboard{
+    display: flex;
+    align-items: center;
+}
+
+.dashboard_title{
+    margin-left: 10px;
+}
+
 
 .nav {
     display: grid;
-    grid-template-columns: auto auto;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 10px 30px;
     grid-column: 2/4;
     background-color: pink;
-    /* grid-row: 1/2; */
+
+}
+
+.search{
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
 }
 
 #searchbar{
     border-radius: 50px;
     padding: 5px 10px;
+    width: 80%;
+    height: 25px;
+    margin-left: 10px;
 }
+
+.search  img{
+    width: 40px;
+    height: 40px;
+}
+
+.username{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.profilePic>img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.user_info{
+    display: flex;
+    align-items: center;
+}
+
+.user_info> .user{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+
+.list{
+    grid-column: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+.nav_button{
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+}
+
 
 .grid {
     background-color: blue;
-    padding: 15px;
+    padding: 15px 30px;
     grid-column: 2/3;
     grid-row: 2/6;
 }
@@ -53,12 +136,20 @@
 
 .projects{
     display: grid;
+    padding: 10px 0;
     gap: 10px;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: aquamarine;
-    width: 300px;
-    height: 100px;
+    height: 200px;
+    padding: 20px;
+}
+
+.pictures{
+    align-self:flex-end;
 }
